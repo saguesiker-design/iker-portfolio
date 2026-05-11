@@ -1,0 +1,443 @@
+/* ─── VARIABLES DE COLOR Y TIPOGRAFÍA ─── */
+:root {
+  --bg:         #06080f;
+  --surface:    rgba(255,255,255,0.04);
+  --border:     rgba(255,255,255,0.08);
+  --text:       #e8eaf6;
+  --muted:      #6b7280;
+  --accent:     #3b82f6;
+  --accent2:    #8b5cf6;
+  --accent3:    #06d6a0;
+  --font-head:  'Syne', sans-serif;
+  --font-body:  'DM Sans', sans-serif;
+  --radius:     20px;
+}
+
+/* ─── RESET BASE ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── LUCES DE FONDO ─── */
+.glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(59,130,246,0.12);
+  top: -150px;
+  left: -150px;
+}
+
+.glow-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(139,92,246,0.1);
+  bottom: -100px;
+  right: -100px;
+}
+
+/* ─── NAVEGACIÓN ─── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 8%;
+  background: rgba(6,8,15,0.75);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.nav-logo {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+}
+
+.hero-inner {
+  max-width: 780px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.25);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 7vw, 76px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-desc {
+  font-size: 20px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-ghost {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.btn-primary {
+  background: white;
+  color: #0a0a0a;
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,0.15);
+  color: white;
+}
+
+.btn-primary:hover, .btn-ghost:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+}
+
+/* ─── SECCIONES GENERALES ─── */
+.section {
+  padding: 100px 8%;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section h2 {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.section-text {
+  color: var(--muted);
+  max-width: 640px;
+  font-size: 18px;
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+/* ─── PROYECTO ─── */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 36px;
+  transition: transform 0.3s, border-color 0.3s;
+  max-width: 780px;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59,130,246,0.3);
+}
+
+.project-img-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+}
+
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 32px 36px 36px;
+}
+
+.project-info h3 {
+  font-family: var(--font-head);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.project-info p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin-top: 24px;
+}
+
+.project-tags li {
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.2);
+  color: #93c5fd;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ─── TECNOLOGÍAS ─── */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin-top: 32px;
+}
+
+.skills-list li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.skills-list li:hover {
+  border-color: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+
+/* ─── APRENDIENDO ─── */
+.learning-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin-top: 32px;
+}
+
+.learning-list li {
+  background: rgba(6,214,160,0.06);
+  border: 1px solid rgba(6,214,160,0.18);
+  color: #6ee7b7;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ─── TIMELINE / ROADMAP ─── */
+.timeline {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.timeline-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 28px 32px;
+  flex: 1 1 260px;
+  transition: border-color 0.3s;
+}
+
+.timeline-item.current {
+  border-color: rgba(59,130,246,0.35);
+  background: rgba(59,130,246,0.06);
+}
+
+.year {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.timeline-item h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ─── CONTACTO ─── */
+.contact-link {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(59,130,246,0.5);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, color 0.2s;
+  margin-top: 16px;
+}
+
+.contact-link:hover {
+  color: #93c5fd;
+  border-color: var(--accent);
+}
+
+/* ─── FOOTER ─── */
+.site-footer {
+  padding: 36px 8%;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ─── ANIMACIONES DE ENTRADA ─── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── RESPONSIVE MÓVIL ─── */
+@media (max-width: 768px) {
+
+  .site-header { padding: 0 5%; }
+
+  .nav-links {
+    display: none; /* simplificado en móvil */
+  }
+
+  .hero {
+    padding: 60px 5%;
+    min-height: auto;
+    padding-top: 100px;
+  }
+
+  .section {
+    padding: 70px 5%;
+  }
+
+  .hero-desc { font-size: 17px; }
+
+  .hero-actions { flex-direction: column; }
+
+  .btn-primary, .btn-ghost { text-align: center; }
+
+  .project-info { padding: 24px 20px; }
+
+  .timeline { flex-direction: column; }
+
+}

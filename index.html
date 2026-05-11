@@ -1,0 +1,180 @@
+<!-- Versión mejorada con semántica correcta y accesibilidad -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Iker – estudiante de CFGS y desarrollador en aprendizaje">
+  <title>Iker · Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Luces de fondo decorativas -->
+  <div class="glow glow-1" aria-hidden="true"></div>
+  <div class="glow glow-2" aria-hidden="true"></div>
+
+  <!-- NAVEGACIÓN -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio" class="nav-logo">Iker Sagués Zafra.</a>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Portfolio 2026</p>
+        <h1>
+          Construyo proyectos digitales
+
+          <span class="gradient-text">y aprendo rápido.</span>
+        </h1>
+        <p class="hero-desc">
+          Estudiante de CFGS de Transporte Marítimo y Pesca de Altura.
+          Aprendo desarrollo web, automatización e IA generativa
+          construyendo proyectos reales desde cero.
+        </p>
+        <div class="hero-actions">
+          <a href="#proyecto" class="btn-primary">Ver mi proyecto →</a>
+          <a href="#contacto" class="btn-ghost">Contactar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+      <div class="section-inner">
+        <p class="section-label">Sobre mí</p>
+        <h2>Quién soy</h2>
+        <p class="section-text">
+          Estudio CFGS de Transporte Marítimo y Pesca de Altura.
+          Fuera del aula, aprendo a construir aplicaciones, automatizaciones
+          y productos digitales. Me interesa la intersección entre tecnología
+          y sectores tradicionales como el marítimo.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROYECTO -->
+    <section id="proyecto" class="section">
+      <div class="section-inner">
+        <p class="section-label">Proyecto</p>
+        <h2>Lo que he construido</h2>
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/proyecto.png"
+                 alt="Captura de la aplicación de reservas"
+                 loading="lazy">
+          </div>
+          <div class="project-info">
+            <h3>App de reservas para restaurante</h3>
+            <p>
+              Aplicación web para gestionar las reservas de un restaurante.
+              El cliente puede reservar mesa, elegir hora y número de personas.
+              Diseñada para ser rápida, simple y funcionar en móvil.
+            </p>
+            <ul class="project-tags" aria-label="Tecnologías usadas">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>IA Generativa</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="section">
+      <div class="section-inner">
+        <p class="section-label">Stack</p>
+        <h2>Tecnologías</h2>
+        <ul class="skills-list" aria-label="Tecnologías que uso">
+          <li>VS Code</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>GitHub</li>
+          <li>IA Generativa</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- APRENDIENDO -->
+    <section class="section">
+      <div class="section-inner">
+        <p class="section-label">En progreso</p>
+        <h2>Actualmente aprendiendo</h2>
+        <ul class="learning-list">
+          <li>React</li>
+          <li>UX / UI Design</li>
+          <li>Automatización con IA</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="section">
+      <div class="section-inner">
+        <p class="section-label">Roadmap</p>
+        <h2>Mi trayectoria</h2>
+        <ol class="timeline" aria-label="Roadmap de aprendizaje">
+          <li class="timeline-item past">
+            <span class="year">2025</span>
+            <h3>Primeros proyectos</h3>
+            <p>Primeras webs, HTML, CSS y conceptos de JavaScript.</p>
+          </li>
+          <li class="timeline-item current">
+            <span class="year">2026</span>
+            <h3>Aplicaciones con IA ← ahora</h3>
+            <p>Proyectos reales, automatizaciones y portfolio publicado.</p>
+          </li>
+          <li class="timeline-item future">
+            <span class="year">2027</span>
+            <h3>Productos propios</h3>
+            <p>React, Next.js y construcción de SaaS propio.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <div class="section-inner">
+        <p class="section-label">Contacto</p>
+        <h2>Hablamos</h2>
+        <p class="section-text">
+          ¿Tienes algún proyecto o idea en mente? Escríbeme.
+        </p>
+        <a href="mailto:sagues.iker@iesnautica.cat" class="contact-link">
+          sagues.iker@iesnautica.cat
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Iker · Hecho con HTML, CSS y JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
